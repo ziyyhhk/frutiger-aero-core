@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frutiger Aero Core</title>
-  <meta name="description" content="Pure Frutiger Aero — glossy glass, water, nature and technology in perfect harmony.">
+  <title>Frutiger Aero</title>
+  <meta name="description" content="Pure Frutiger Aero — glass, water, nature and technology in harmony.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
   <div class="bg-layer"></div>
   <div class="water-surface"></div>
   <div class="aurora"></div>
   <div id="bubbles" class="bubbles-container"></div>
   <div class="light-rays"></div>
   <div class="grass-layer"></div>
+  <div class="floating-orbs"></div>
 
   <div class="aero-window">
     <div class="window-titlebar">
@@ -34,111 +33,71 @@
     </div>
 
     <nav class="aero-nav">
-      <a href="#home" class="nav-item active">Home</a>
-      <a href="#about" class="nav-item">About</a>
-      <a href="#elements" class="nav-item">Elements</a>
-      <a href="#world" class="nav-item">World</a>
-      <a href="#contact" class="nav-item">Contact</a>
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="about.html" class="nav-item">About</a>
+      <a href="gallery.html" class="nav-item">Gallery</a>
+      <a href="elements.html" class="nav-item">Elements</a>
+      <a href="world.html" class="nav-item">World</a>
     </nav>
 
     <main class="window-content">
-      <section id="home" class="hero">
+      <section class="hero">
         <div class="hero-glass">
-          <div class="glossy-orb"></div>
+          <div class="glossy-orb large"></div>
           <h1 class="hero-title">
             <span class="shine">Frutiger</span> <span class="aero">Aero</span>
           </h1>
-          <p class="hero-subtitle">Technology in perfect harmony with nature.<br>Glass. Water. Light. The optimistic future of the 2000s.</p>
+          <p class="hero-subtitle">Clear water. Soft grass. Glossy glass.<br>Technology floating in perfect harmony with nature.</p>
           <div class="hero-buttons">
-            <button class="aero-btn primary">
+            <a href="about.html" class="aero-btn primary">
               <span class="btn-shine"></span>
-              Enter the Dream
-            </button>
-            <button class="aero-btn secondary">
+              Discover
+            </a>
+            <a href="gallery.html" class="aero-btn secondary">
               <span class="btn-shine"></span>
-              Explore
-            </button>
+              Gallery
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="glass-card">
-          <h2 class="section-title">The Aesthetic</h2>
-          <p>Frutiger Aero was the visual language of hope. Glossy interfaces, crystal clear water, endless green fields, floating cities inside bubbles, and technology that felt alive and friendly. From Windows Vista glass to early iPod shine, everything reflected light and nature.</p>
-          <div class="feature-pills">
-            <span class="pill">Glass & Reflections</span>
-            <span class="pill">Water & Bubbles</span>
-            <span class="pill">Nature + Tech</span>
-            <span class="pill">Soft Gradients</span>
-            <span class="pill">Optimistic Future</span>
-          </div>
+      <section class="section">
+        <div class="glass-card wide">
+          <h2 class="section-title">Welcome to the clear world</h2>
+          <p>This is the visual language of the mid-2000s — optimistic, liquid, reflective. Soft blues and greens, rising bubbles, floating cities inside crystal spheres, and interfaces that felt warm and alive.</p>
+          <p style="margin-top:14px">Everything here is pure HTML, CSS and JavaScript. No frameworks. Just the feeling of opening a window into that era.</p>
         </div>
       </section>
 
-      <section id="elements" class="section features">
-        <h2 class="section-title center">Signature Elements</h2>
+      <section class="section features">
         <div class="cards-grid">
-          <div class="glass-card feature-card">
+          <a href="about.html" class="glass-card feature-card link-card">
             <div class="icon-orb water"></div>
-            <h3>Crystal Water</h3>
-            <p>Clear blue surfaces, rising bubbles and soft caustics that make every panel feel liquid.</p>
-          </div>
-          <div class="glass-card feature-card">
+            <h3>About the Style</h3>
+            <p>The history and meaning behind Frutiger Aero.</p>
+          </a>
+          <a href="gallery.html" class="glass-card feature-card link-card">
             <div class="icon-orb glass"></div>
-            <h3>True Gloss</h3>
-            <p>Layered highlights, inner shadows and moving shine that mimic real glass and polished plastic.</p>
-          </div>
-          <div class="glass-card feature-card">
-            <div class="icon-orb nature"></div>
-            <h3>Living Nature</h3>
-            <p>Grass, light, sky and organic forms that sit peacefully next to technology.</p>
-          </div>
-          <div class="glass-card feature-card">
+            <h3>Gallery</h3>
+            <p>Classic scenes of water, cities and light.</p>
+          </a>
+          <a href="elements.html" class="glass-card feature-card link-card">
             <div class="icon-orb tech"></div>
-            <h3>Friendly Tech</h3>
-            <p>Rounded devices, soft interfaces and skeuomorphic details that feel warm instead of cold.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="world" class="section">
-        <h2 class="section-title center">The World</h2>
-        <div class="showcase-grid">
-          <div class="showcase-item glass-card">
-            <div class="showcase-visual v1"></div>
-            <p>Underwater Light</p>
-          </div>
-          <div class="showcase-item glass-card">
-            <div class="showcase-visual v2"></div>
-            <p>Bubble City</p>
-          </div>
-          <div class="showcase-item glass-card">
-            <div class="showcase-visual v3"></div>
-            <p>Aurora Fields</p>
-          </div>
-          <div class="showcase-item glass-card">
-            <div class="showcase-visual v4"></div>
-            <p>Glass Horizon</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section cta-section">
-        <div class="glass-card cta-card">
-          <h2>Step into the clear blue</h2>
-          <p>Pure HTML, CSS and JavaScript. No frameworks. Just the feeling of 2007, perfected.</p>
-          <button class="aero-btn primary large">
-            <span class="btn-shine"></span>
-            Open on GitHub
-          </button>
+            <h3>Elements</h3>
+            <p>Buttons, orbs, glass panels and UI pieces.</p>
+          </a>
+          <a href="world.html" class="glass-card feature-card link-card">
+            <div class="icon-orb nature"></div>
+            <h3>The World</h3>
+            <p>Nature and technology living together.</p>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="window-footer">
       <span>Frutiger Aero Core</span>
-      <span class="footer-right">Pure 2000s • 2026</span>
+      <span class="footer-right">Pure 2000s</span>
     </footer>
   </div>
 
