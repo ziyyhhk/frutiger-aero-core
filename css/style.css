@@ -312,6 +312,23 @@ body {
   transition: transform 0.12s ease-out;
 }
 
+.glossy-orb.large {
+  width: 130px;
+  height: 130px;
+}
+
+.glossy-orb.medium {
+  width: 90px;
+  height: 90px;
+  margin: 0 12px;
+}
+
+.glossy-orb.small {
+  width: 64px;
+  height: 64px;
+  margin: 0 8px;
+}
+
 .glossy-orb::before {
   content: "";
   position: absolute;
@@ -379,6 +396,8 @@ body {
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   color: #fff;
   text-shadow: 0 1px 2px rgba(0,0,0,0.22);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .aero-btn.primary {
@@ -464,12 +483,29 @@ body {
   transition: transform 0.32s ease, box-shadow 0.32s ease;
 }
 
+.glass-card.wide {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.glass-card.mini {
+  padding: 18px 14px;
+  text-align: center;
+  min-width: 110px;
+}
+
 .glass-card:hover {
   transform: translateY(-4px);
   box-shadow:
     0 18px 44px rgba(0,55,110,0.28),
     inset 0 1px 0 rgba(255,255,255,0.5),
     0 0 24px rgba(70,200,255,0.15);
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .feature-pills {
@@ -490,7 +526,8 @@ body {
 }
 
 /* Feature cards */
-.features .cards-grid {
+.features .cards-grid,
+.cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 18px;
@@ -561,6 +598,10 @@ body {
   margin-top: 8px;
 }
 
+.showcase-grid.large {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
 .showcase-item {
   padding: 14px;
   text-align: center;
@@ -598,10 +639,49 @@ body {
     linear-gradient(95deg, #0d47a1, #00695c, #1b5e20);
 }
 
+.showcase-visual.v5 {
+  background:
+    radial-gradient(circle at 40% 35%, rgba(255,255,255,0.5) 0%, transparent 40%),
+    radial-gradient(circle at 70% 65%, rgba(150,230,255,0.3) 0%, transparent 35%),
+    linear-gradient(160deg, #81d4fa, #4fc3f7, #0288d1);
+}
+
+.showcase-visual.v6 {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 30%),
+    linear-gradient(135deg, #00e5ff, #00bcd4, #00838f);
+}
+
 .showcase-item p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  color: #fff;
+}
+
+.showcase-item .caption {
+  display: block;
+  font-size: 0.78rem;
   color: var(--text-soft);
+  margin-top: 4px;
+}
+
+/* Elements page */
+.elements-demo {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.demo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.buttons-row {
+  gap: 14px;
 }
 
 /* CTA */
