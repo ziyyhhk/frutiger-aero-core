@@ -1,22 +1,21 @@
 /* ============================================
-   FRUTIGER AERO CORE — Animations & Interactions
+   FRUTIGER AERO CORE — Animations
    ============================================ */
 
 (function () {
   "use strict";
 
-  // ---------- Bubble Generator ----------
   const bubblesContainer = document.getElementById("bubbles");
-  const BUBBLE_COUNT = 28;
+  const BUBBLE_COUNT = 34;
 
   function createBubble() {
     const bubble = document.createElement("div");
     bubble.classList.add("bubble");
 
-    const size = Math.random() * 60 + 20; // 20–80px
+    const size = Math.random() * 70 + 18;
     const left = Math.random() * 100;
-    const duration = Math.random() * 18 + 14; // 14–32s
-    const delay = Math.random() * -20;
+    const duration = Math.random() * 20 + 15;
+    const delay = Math.random() * -25;
 
     bubble.style.width = `${size}px`;
     bubble.style.height = `${size}px`;
@@ -24,30 +23,27 @@
     bubble.style.animationDuration = `${duration}s`;
     bubble.style.animationDelay = `${delay}s`;
 
-    // Slight horizontal drift via custom property
-    const drift = (Math.random() - 0.5) * 80;
+    const drift = (Math.random() - 0.5) * 100;
     bubble.style.setProperty("--drift", `${drift}px`);
 
     bubblesContainer.appendChild(bubble);
 
-    // Clean up after animation cycles for performance
     setTimeout(() => {
       if (bubble.parentNode) bubble.remove();
-      createBubble(); // keep the count stable
+      createBubble();
     }, (duration + Math.abs(delay)) * 1000);
   }
 
-  // Seed initial bubbles
   for (let i = 0; i < BUBBLE_COUNT; i++) {
-    setTimeout(() => createBubble(), i * 180);
+    setTimeout(() => createBubble(), i * 140);
   }
 
-  // ---------- Smooth Nav Active State ----------
+  // Nav
   const navItems = document.querySelectorAll(".nav-item");
   const sections = document.querySelectorAll("section[id]");
 
   function updateActiveNav() {
-    const scrollPos = window.scrollY + 120;
+    const scrollPos = (document.querySelector(".window-content")?.scrollTop || window.scrollY) + 100;
 
     sections.forEach((section) => {
       const top = section.offsetTop;
@@ -65,7 +61,6 @@
     });
   }
 
-  // Also handle click for smooth scroll + active
   navItems.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
@@ -78,9 +73,9 @@
     });
   });
 
-  // ---------- Button Interactions ----------
-  const primaryBtn = document.querySelector(".aero-btn.primary");
-  const secondaryBtn = document.querySelector(".aero-btn.secondary");
+  // Buttons
+  const primaryBtn = document.querySelector(".hero .aero-btn.primary");
+  const secondaryBtn = document.querySelector(".hero .aero-btn.secondary");
   const starBtn = document.querySelector(".cta-card .aero-btn");
 
   if (primaryBtn) {
@@ -91,7 +86,7 @@
 
   if (secondaryBtn) {
     secondaryBtn.addEventListener("click", () => {
-      document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("elements")?.scrollIntoView({ behavior: "smooth" });
     });
   }
 
@@ -101,29 +96,27 @@
     });
   }
 
-  // ---------- Subtle Mouse Parallax on Orb ----------
+  // Parallax on orb
   const orb = document.querySelector(".glossy-orb");
   if (orb) {
     document.addEventListener("mousemove", (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 12;
-      const y = (e.clientY / window.innerHeight - 0.5) * 8;
+      const x = (e.clientX / window.innerWidth - 0.5) * 14;
+      const y = (e.clientY / window.innerHeight - 0.5) * 9;
       orb.style.transform = `translate(${x}px, ${y}px)`;
     });
   }
 
-  // ---------- Window Content Scroll Listener ----------
   const content = document.querySelector(".window-content");
   if (content) {
     content.addEventListener("scroll", updateActiveNav);
   }
 
-  // Initial call
   updateActiveNav();
 
-  // ---------- Performance: Reduce motion preference ----------
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (prefersReduced.matches) {
+  // Reduced motion
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     document.querySelectorAll(".bubble").forEach((b) => b.remove());
-    document.querySelector(".aurora")?.style.setProperty("animation", "none");
+    const aurora = document.querySelector(".aurora");
+    if (aurora) aurora.style.animation = "none";
   }
 })();
