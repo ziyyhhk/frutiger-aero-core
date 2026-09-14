@@ -1,48 +1,26 @@
 # Frutiger Aero Core
 
-Pure Frutiger Aero aesthetic.  
-Glossy glass, rising bubbles, water surfaces, soft grass, aurora light and technology in harmony with nature.
+Pure Frutiger Aero aesthetic across multiple pages.
 
-No emojis. No modern flat design. Just the optimistic 2000s look done properly.
-
----
-
-## Live
-
-Open `index.html` in any modern browser.
+Glossy glass windows, rising bubbles, water surfaces, soft grass, aurora light, and technology living in harmony with nature — exactly in the spirit of the classic 2000s wallpapers.
 
 ---
 
-## What it has
+## Pages
 
-- Authentic Aero glass window (titlebar, traffic lights, deep blur)
-- Multi-layer background: sky gradients + water surface + grass fade + aurora
-- Dozens of soft floating bubbles with natural drift
-- Large glossy orb with mouse parallax
-- Proper glossy buttons with moving shine
-- Pure CSS icon orbs (water / glass / nature / tech)
-- Smooth section navigation
-- Fully responsive
-- Zero frameworks, zero dependencies
+- **Home** — immersive landing
+- **About** — what Frutiger Aero is
+- **Gallery** — classic visual scenes
+- **Elements** — glossy orbs, buttons and glass panels
+- **World** — nature + technology together
 
 ---
 
-## Structure
+## How to view
 
-```
-frutiger-aero-core/
-├── index.html
-├── css/style.css
-├── js/main.js
-└── README.md
-```
+Just open `index.html` (or any of the other pages) in a modern browser.
 
----
-
-## Customize
-
-Colors and feel live in the CSS variables at the top of `style.css`.  
-Bubble count and size range are in `js/main.js`.
+No build step. No frameworks. Pure HTML + CSS + JS.
 
 ---
 
